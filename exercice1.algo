@@ -1,0 +1,42 @@
+ALGORITHM text
+VAR
+    x,y,z:= INTEGER;
+    sum:=0;
+    tab[i]:=INTEGER;
+    
+
+BEGIN
+    x:=0 ;
+    y:=1 ;
+    z:=2 ;
+
+    write("write the text"); 
+    read(text)
+     WHILE  (text[i] <> ".") THEN
+    write("Please write text completed with .");
+      read(text);
+  END_WHILE
+
+   REPEAT
+        IF (text[z]=" ") THEN
+
+             y:=y+1 ;
+
+        END_IF
+
+        IF (text[z] in ["a","e","u","i","o","y"] or text[z] in ["A","E","U","I","O","Y"] ) THEN
+
+             x:=x +1 ;
+
+        END_IF
+
+             z:=z+1 ;
+
+    UNTIL (test[z]=".");
+
+   write (" The word count is ",y);
+
+   write( " The number of characters is ",z+1 );
+
+   write ( " The vowel number is ",x);
+END
